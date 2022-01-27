@@ -1,0 +1,23 @@
+{
+  "name": "loginjwt",
+  "version": "1.0.0",
+  "description": "Uma Api REST para login.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richnei/LoginJWT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richnei/LoginJWT/issues"
+  },
+  "homepage": "https://github.com/richnei/LoginJWT#readme",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2"
+  }
+}
