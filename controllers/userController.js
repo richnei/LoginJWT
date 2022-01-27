@@ -18,10 +18,21 @@ const userController = {
       res.status(400).send(error);
     }
   },
-  login: function login(req, res) {
-    console.log("login");
-    res.send("login");
-  },
+    login: async function login(req, res) {
+        const selectedUser = await User.findOne({ email: req.body.email });
+        if (!selectedUser)
+        return res.status(400).send("Email or Password incorrect");
+
+        const passwordAndUserMatch = bcrypt.compareSync(
+        req.body.password,
+        selectedUser.password
+        );
+
+        if (!passwordAndUserMatch)
+        return res.status(400).send("Email or Password incorrect");
+
+        res.send("User Logged");
+    },
 };
 
 module.exports = userController;
