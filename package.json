@@ -18,6 +18,7 @@
   "homepage": "https://github.com/richnei/LoginJWT#readme",
   "dependencies": {
     "dotenv": "^14.3.2",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
   }
 }
